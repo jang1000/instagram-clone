@@ -1,0 +1,137 @@
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+}
+
+.header__logo {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.header__logo:hover {
+  transform: translateY(-1px);
+}
+
+.header__logo h1 {
+  font-size: 28px;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.header__subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header__navItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.header__navItem:hover {
+  color: var(--primary-color);
+  background: var(--background-secondary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.header__navItem--primary {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+}
+
+.header__navItem--primary:hover {
+  background: var(--gradient-secondary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    padding: 16px 20px;
+  }
+  
+  .header__logo h1 {
+    font-size: 24px;
+  }
+  
+  .header__nav {
+    gap: 12px;
+  }
+  
+  .header__navItem {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .header__navItem span {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__container {
+    padding: 12px 16px;
+  }
+  
+  .header__logo h1 {
+    font-size: 20px;
+  }
+  
+  .header__subtitle {
+    font-size: 12px;
+  }
+  
+  .header__nav {
+    gap: 8px;
+  }
+  
+  .header__navItem {
+    padding: 8px 12px;
+  }
+}
